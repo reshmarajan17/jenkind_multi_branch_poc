@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    properties([parameters([string(defaultValue: 'us-east-1', name: 'region')])])
     stages {
         stage('build') {
             steps {
@@ -10,6 +9,7 @@ pipeline {
         stage('test_parameter') {
           steps {
               script {
+              input message: 'enter region', parameters: [string(defaultValue: 'us-east-1', name: 'region')]
               sh """
               sh bash.sh
               """
