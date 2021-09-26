@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    properties([parameters([string(defaultValue: 'us-east-1', name: 'region')])])
     stages {
         stage('build') {
             steps {
