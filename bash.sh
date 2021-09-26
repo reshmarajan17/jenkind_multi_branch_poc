@@ -1,2 +1,4 @@
 #!/bin/bash
-echo ${region}
+echo "Enter Region"
+read region
+echo "${region}"
