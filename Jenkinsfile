@@ -10,8 +10,8 @@ pipeline {
           steps {
               script {
               sh """
-              echo "variable printing"
-              echo ${region}
+              sh bash.sh
+              """
               }
          }
        }
